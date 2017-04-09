@@ -1,0 +1,55 @@
+/* =================================
+Base Element Styles
+==================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+	color: lighten(grey, 20%);
+  font-size: $base__font-size;
+  font-family: $font-family--secondary;
+  line-height: $base__line;
+	background-color: #2A3D45;
+}
+
+// Text
+h1, h2, h3 {
+	font-family: $font-family--primary;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-size: em(18px);
+	line-height: $base__line;
+}
+
+// Lists
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+// Images
+
+img {
+
+}
+
+// Form elements
+textarea {
+    resize: none;
+}
+
+
+// Button
+
+button {
+	outline: 0;
+}

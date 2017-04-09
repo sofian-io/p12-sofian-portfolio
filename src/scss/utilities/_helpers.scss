@@ -1,0 +1,20 @@
+/* =================================
+Helper classes
+==================================== */
+
+// Clearfix
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+// Center alignment
+
+%center-align {
+	text-align: center;
+}
