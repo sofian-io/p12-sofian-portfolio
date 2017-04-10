@@ -1,0 +1,2 @@
+"use strict";var mobileMenu=document.querySelector(".mobile__menu"),nav=document.querySelector(".nav"),body=document.querySelector(".body"),header=document.querySelector(".header");mobileMenu.addEventListener("click",function(){nav.classList.toggle("is__visible"),body.classList.toggle("push__left"),header.classList.toggle("push__left")}),window.addEventListener("scroll",function(e){console.log("test"),console.log(window.scrollY)});
+//# sourceMappingURL=app.js.map
