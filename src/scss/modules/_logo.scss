@@ -1,0 +1,14 @@
+.logo{
+  font-family: $font-family--primary;
+  font-weight: $font-weight--bold;
+  color: $color-primary;
+  font-size: em(20px);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: .9em;
+  position: fixed;
+  line-height: 1.5em;
+  @include mq(medium){
+    line-height: 3.5em;
+  }
+}

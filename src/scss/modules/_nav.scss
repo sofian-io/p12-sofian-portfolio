@@ -1,0 +1,56 @@
+.nav{
+  position: fixed;
+  background-color: $bg-nav;
+  border-left: 1px solid darken($bg-nav, 5%);
+  height: 100%;
+  width: 80%;
+  top: 0;
+  right: -80%;
+  transition: all .4s cubic-bezier(0,.65,.63,.74);
+  @include mq(medium){
+    top: auto;
+    right: auto;
+    width: auto;
+    height: auto;
+    position: static;
+    background-color: transparent;
+    border: none;
+    float: right;
+  }
+  @include e(container){
+    padding-top: em(26px);
+    @include mq(medium){
+      display: flex;
+    }
+  }
+  @include e(item){
+    width: 100%;
+    text-align: center;
+  }
+  @include e(link){
+    @extend %link;
+    color: $color-link;
+    padding: 0 em(40px);
+    display: block;
+    width: 100%;
+    &:hover{
+      color: $color-primary;
+    }
+
+    @include m(contact){
+      @extend %link;
+      background-color: $color-primary;
+      color: $white;
+      padding: 10px 15px;
+      border-radius: 50px;
+      box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
+      &:hover{
+        background-color: lighten($color-primary, 10%);
+      }
+      @include mq(medium){
+        margin-left: 2.5em;
+      }
+    }
+  }
+
+}

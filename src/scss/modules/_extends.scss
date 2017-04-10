@@ -13,3 +13,25 @@ Helper classes
 	position: absolute;
 	width: 1px;
 }
+
+.push__left{
+	left: -80%;
+}
+.is__visible{
+	right: 0;
+}
+.is__sticky{
+	height: 60px;
+	background-color: $white;
+	border-bottom: 1px solid darken($bg-nav, 5%);
+}
+
+%link{
+	font-weight: $font-weight--medium;
+	font-family: $font-family--primary;
+	font-size: em(14px);
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 4em;
+	letter-spacing: 1px;
+}

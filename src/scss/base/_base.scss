@@ -6,25 +6,35 @@ Base Element Styles
 }
 
 body {
-	color: lighten(grey, 20%);
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  color: $color-primary;
   font-size: $base__font-size;
   font-family: $font-family--secondary;
   line-height: $base__line;
-	background-color: #2A3D45;
+  background-color: $white;
 }
 
 // Text
 h1, h2, h3 {
-	font-family: $font-family--primary;
+  font-family: $font-family--primary;
+  font-weight: $font-weight--bold;
+  color: $color-primary;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
+  color: $color-link;
+}
+a:focus{
+  outline: none;
 }
 
 p {
-	font-size: em(18px);
-	line-height: $base__line;
+  font-family: $font-family--secondary;
+  font-size: em(18px);
+  line-height: $base__line;
 }
 
 // Lists
@@ -44,12 +54,12 @@ img {
 
 // Form elements
 textarea {
-    resize: none;
+  resize: none;
 }
 
 
 // Button
 
 button {
-	outline: 0;
+  outline: 0;
 }
