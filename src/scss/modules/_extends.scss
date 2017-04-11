@@ -25,6 +25,9 @@ Helper classes
 	background-color: $white;
 	border-bottom: 1px solid darken($bg-nav, 5%);
 }
+.sticky{
+	margin-top: 0;
+}
 
 %link{
 	font-weight: $font-weight--medium;

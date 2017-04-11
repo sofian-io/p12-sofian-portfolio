@@ -6,7 +6,7 @@
   width: 80%;
   top: 0;
   right: -80%;
-  transition: all .4s cubic-bezier(0,.65,.63,.74);
+  @extend %transition;
   @include mq(medium){
     top: auto;
     right: auto;
@@ -18,7 +18,7 @@
     float: right;
   }
   @include e(container){
-    padding-top: em(26px);
+    margin-top: em(26px);
     @include mq(medium){
       display: flex;
     }
@@ -29,6 +29,7 @@
   }
   @include e(link){
     @extend %link;
+    @extend %transition;
     color: $color-link;
     padding: 0 em(40px);
     display: block;

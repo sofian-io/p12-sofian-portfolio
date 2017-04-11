@@ -1,0 +1,33 @@
+.hero{
+  position: relative;
+  padding: 100px 5% 0 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @include e(title){
+    font-size: em(48px);
+  }
+  @include e(text){
+    font-size: em(24px);
+    line-height: 1.7em;
+    font-weight: $font-weight--light;
+  }
+  @include e(link){
+    margin-top: 0;
+    font-family: $font-family--primary;
+    font-weight: $font-weight--medium;
+    border-bottom: 1px dotted $color-primary;
+  }
+  @include e(figure){
+    max-width: 650px;
+    margin: 0;
+  }
+  @include e(image){
+    display: none;
+    width: 100%;
+    z-index: -1;
+    @include mq(medium){
+      display: block;
+    }
+  }
+}

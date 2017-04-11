@@ -18,3 +18,10 @@ Helper classes
 %center-align {
 	text-align: center;
 }
+
+
+// Custom transition effect
+
+%transition{
+  transition: all .4s cubic-bezier(0,.65,.63,.74);
+}
