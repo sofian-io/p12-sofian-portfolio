@@ -7,11 +7,18 @@
   }
   @include e(text){
     color: $color-primary;
-    font-weight: $font-weight--bold;
-    font-family: "Dosis",sans-serif;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    @extend %sidebar__text;
+    @include m(inverse){
+      color: $white;
+      @extend %sidebar__text;
+      @include mq(medium){
+        position: absolute;
+        text-align: center;
+        top: 27px;
+        left: 16px;
+        font-size: 1em;
+      }
+    }
     @include mq(medium){
       position: absolute;
       text-align: center;

@@ -1,0 +1,10 @@
+.work{
+  padding: 100px 5% 0 5%;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-nav;
+  @include mq(medium){
+    flex-direction: row;
+  }
+}

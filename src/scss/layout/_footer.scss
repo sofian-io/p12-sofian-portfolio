@@ -1,0 +1,34 @@
+.footer{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 175px;
+  vertical-align: middle;
+  background-color: $color-link;
+  @include e(icon){
+    width: 24px;
+    height: 24px;
+    padding: 1%;
+    --primary-color: $white;
+  }
+  @include e(heading){
+    color: #ffd700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: em(14px);
+    font-weight: $font-weight--medium;
+    margin-bottom: .7em;
+  }
+  @include e(label){
+    font-size: em(14px);
+    color: #ffd700;
+    letter-spacing: 1px;
+    padding-right: em(16px);
+    font-weight: $font-weight--light;
+  }
+  @include e(link){
+    font-size: em(14px);
+    color:white;
+    font-weight: $font-weight--light;
+  }
+}
