@@ -32,38 +32,76 @@
 
 
   <header class="header">
-    <h1 class="logo"><a href="/" accesskey="1"><span>Sofian</span></a></h1>
+    <h1 class="logo"><a href="/"><span>Sofian</span></a></h1>
     <nav class="nav">
       <ul class="nav__container">
-        <li class="nav__item"><a class="nav__link" href="#about" accesskey="2">About</a></li>
-        <li class="nav__item"><a class="nav__link" href="#work" accesskey="3">Work</a></li>
-        <li class="nav__item"><a class="nav__link--contact" href="#contact" accesskey="4">Contact</a></li>
+        <li class="nav__item"><a class="nav__link" href="#skills">Skills</a></li>
+        <li class="nav__item"><a class="nav__link" href="#work">Work</a></li>
+        <li class="nav__item"><a class="nav__link--button" href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="mobile__menu" accesskey="m">
+    <div class="mobile__menu">
       <svg>
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite/sprite.svg#svg--menu"></use>
       </svg>
     </div>
   </header>
-    <div class="hero">
-      <div class="hero__content">
-        <h2 class="hero__title">Front-end Developer <br class="is__hidden"> & Digital Nomad</h2>
-        <p class="hero__text">Hello, I'm Sofian a web developer! <br> I love creating beautiful, clean & intuitive websites. <br> Learn a bit more <a class="hero__link" href="#about">about me.</a> </p>
-      </div>
-      <figure class="hero__figure">
-        <img class="hero__image" src="img/hero.png" alt="colourful graffiti art piece">
-      </figure>
+  <div class="hero">
+    <div class="hero__content">
+      <h2 class="hero__title">Front-end Developer <br class="is__hidden"> & Digital Nomad</h2>
+      <p class="hero__text">Hello, I'm Sofian a web developer! <br> I love creating beautiful, clean & intuitive websites. <br> Learn a bit more <a class="hero__link" href="#skills">about me.</a> </p>
     </div>
-    <main class="main">
-      <section id="about">
-
-      </section>
-      <section id="work">
-      </section>
-      <section id="contact">
-      </section>
-    </main> <!-- #main-container -->
+    <figure class="hero__figure">
+      <img class="hero__image" src="img/hero.png" alt="colourful graffiti art piece">
+    </figure>
+  </div>
+  <main class="main">
+    <section id="skills" class="about">
+      <div class="sidebar">
+        <div class="sidebar__content">
+          <svg class="sidebar__icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite/sprite.svg#svg--hexagon"></use>
+          </svg>
+          <span class="sidebar__text">Skills</span>
+        </div>
+      </div>
+      <div class="about__content">
+        <h1 class="about__title">I'm Specialized in</h1>
+        <div class="card">
+          <svg class="card__icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite/sprite.svg#svg--light-bulb"></use>
+          </svg>
+          <h3 class="card__heading">Concepting</h3>
+          <p class="card__text">I love to connect with clients or working in a team to transform an idea into a stunning design. Using tools like Balsamiq and Photoshop I create wireframes then build up the interface keeping design paterns in mind.</p>
+        </div>
+        <div class="card">
+          <svg class="card__icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite/sprite.svg#svg--responsive"></use>
+          </svg>
+          <h3 class="card__heading">Responsive</h3>
+          <p class="card__text">I create websites, that look great on any device, using HTML - CSS and JavaScript. I love building from scratch, I'm also proficient with front-end frameworks like Bootstrap, Foundation and Semantic ui.</p>
+        </div>
+        <div class="card">
+          <svg class="card__icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite/sprite.svg#svg--growth"></use>
+          </svg>
+          <h3 class="card__heading">Scaling</h3>
+          <p class="card__text">When it comes to building solid interactive web applications I use AngularJS (MEAN Stack) or React, but if the scope is a better fit I can also setup and customize open source systems like <a class="hero__link" target="_blank" href="https://www.500daysoff.com/">WordPress</a> & Magento.</p>
+        </div>
+        <div class="card">
+          <svg class="card__icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite/sprite.svg#svg--speedometer"></use>
+          </svg>
+          <h3 class="card__heading">Performance & Accessibility</h3>
+          <p class="card__text">Websites are meant to captivate an audience but we can't always anticipate who are visitors are or where they come from. That is why I build websites that are lightning fast and that meet WCAG 2.0 standards.</p>
+        </div>
+      </div>
+    </section>
+    <section id="work">
+    </section>
+    <section id="contact">
+    </section>
+  </main> <!-- #main-container -->
   <footer class="footer">
 
   </footer>
