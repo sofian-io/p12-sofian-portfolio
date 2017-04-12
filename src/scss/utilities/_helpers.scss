@@ -20,8 +20,11 @@ Helper classes
 }
 
 
-// Custom transition effect
+// Custom transition effects
 
 %transition{
   transition: all .4s cubic-bezier(0,.65,.63,.74);
+}
+%scroll{
+  transition: all .4s cubic-bezier(.06,.5,.6,.69);
 }

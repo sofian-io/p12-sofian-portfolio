@@ -18,6 +18,7 @@
     float: right;
   }
   @include e(container){
+    @extend %transition;
     margin-top: em(26px);
     @include mq(medium){
       display: flex;
@@ -38,7 +39,7 @@
       color: $color-primary;
     }
 
-    @include m(contact){
+    @include m(button){
       @extend %link;
       background-color: $color-primary;
       color: $white;

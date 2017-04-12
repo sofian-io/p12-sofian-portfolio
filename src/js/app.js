@@ -5,6 +5,7 @@ const body = document.querySelector('.body');
 const header = document.querySelector('.header');
 const navContainer = document.querySelector('.nav__container');
 const logo = document.querySelector('.logo');
+const about = document.querySelector('.about');
 
 mobileMenu.addEventListener('click', ()=>{
 
@@ -23,4 +24,16 @@ window.addEventListener('scroll', function(e) {
     navContainer.classList.remove('sticky');
     logo.classList.remove('sticky');
   }
+});
+about.addEventListener('scroll', function(e) {
+  console.log(window.scrollY);
+  // if(window.scrollY){
+  //   header.classList.add('is__sticky');
+  //   navContainer.classList.add('sticky');
+  //   logo.classList.add('sticky');
+  // }else if(!window.scrollY){
+  //   header.classList.remove('is__sticky');
+  //   navContainer.classList.remove('sticky');
+  //   logo.classList.remove('sticky');
+  // }
 });

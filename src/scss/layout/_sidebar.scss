@@ -1,0 +1,32 @@
+.sidebar{
+  @include mq(medium){
+    flex: 1 20%;
+  }
+  @include e(content){
+    position: relative;
+  }
+  @include e(text){
+    color: $color-primary;
+    font-weight: $font-weight--bold;
+    font-family: "Dosis",sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include mq(medium){
+      position: absolute;
+      text-align: center;
+      top: 27px;
+      left: 16px;
+      font-size: 1em;
+    }
+  }
+  @include e(icon){
+    display: none;
+    width: 80px;
+    height: 80px;
+    --primary-color: $color-primary;
+    @include mq(medium){
+      display: block;
+    }
+  }
+}

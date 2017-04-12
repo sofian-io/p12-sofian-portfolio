@@ -1,0 +1,26 @@
+.about{
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  @include mq(medium){
+    flex-direction: row;
+  }
+  @include e(title){
+    flex: 1 100%;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: em(32px);
+    @include mq(medium){
+      margin-top: 0;
+      font-size: em(48px);
+    }
+
+  }
+  @include e(content){
+    display: flex;
+    flex-wrap: wrap;
+    @include mq(medium){
+      flex:1 80%;
+    }
+  }
+}

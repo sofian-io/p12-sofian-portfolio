@@ -2,10 +2,10 @@
   position: relative;
   padding: 100px 5% 0 5%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   @include e(title){
     font-size: em(48px);
+    letter-spacing: 1px;
   }
   @include e(text){
     font-size: em(24px);
