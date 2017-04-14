@@ -56,13 +56,15 @@ img {
 }
 
 // Form elements
+fieldset, textarea, input{
+  border: none;
+}
 textarea {
   resize: none;
 }
 
-
 // Button
 
-button {
+input, textarea, button {
   outline: 0;
 }

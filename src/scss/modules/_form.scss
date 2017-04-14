@@ -1,0 +1,74 @@
+.form{
+  flex: 1 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  @include e(fieldset){
+    padding-top: 2.5em;
+    padding-right: 2em;
+    border:none;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    @include m(button){
+      flex: 1 100%;
+      margin-top: .5em;
+    }
+  }
+  @include e(label){
+    top: 30px;
+    font-size: 1em;
+    position: absolute;
+    @extend %transition;
+  }
+  @include e(input){
+    border-bottom: 1px solid #d5d5d5;
+    width: 100%;
+    padding-right: em(16px);
+    padding-bottom: em(16px);
+    font-weight: $font-weight--light;
+    @extend %transition;
+    &:focus{
+      border-bottom-color: #9DD9D2;
+    }
+    @include m(textarea){
+      border-bottom: 1px solid #d5d5d5;
+      width: 100%;
+      @extend %transition;
+      height: 220px;
+      &:focus{
+        border-bottom-color: #9DD9D2;
+      }
+    }
+  }
+  @include e(button){
+    border: none;
+    float: left;
+    margin-bottom: 1.42857em;
+    margin-top: 1.42857em;
+    padding: 15px 30px;
+    border-radius: 0.4em;
+    box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
+    background-color: $color-primary;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    font-weight: 400;
+    @extend %transition;
+    &:hover{
+      opacity: .9;
+      box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
+  @include e(left){
+    flex: 1 35%;
+
+  }
+  @include e(right){
+    flex: 1 65%;
+
+  }
+
+}
