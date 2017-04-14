@@ -2,9 +2,14 @@
   flex: 1 100%;
   text-align: center;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   margin: auto;
+  @include mq(medium){
+    flex-direction: row;
+    width: 80%;
+  }
   @include e(fieldset){
     padding-top: 2.5em;
     padding-right: 2em;
@@ -63,12 +68,17 @@
     }
   }
   @include e(left){
-    flex: 1 35%;
+    flex: 1 100%;
+    @include mq(medium){
+      flex: 1 35%;
+    }
 
   }
   @include e(right){
-    flex: 1 65%;
-
+    flex: 1 100%;
+    @include mq(medium){
+      flex: 1 65%;
+    }
   }
 
 }
