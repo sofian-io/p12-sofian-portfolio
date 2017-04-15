@@ -18,7 +18,7 @@ mobileMenu.addEventListener('click', ()=>{
   body.classList.toggle('push__left');
   header.classList.toggle('push__left');
 });
-window.addEventListener('scroll', function(e) {
+window.addEventListener('scroll', function() {
   // console.log(window.scrollY);
   if(window.scrollY){
     header.classList.add('is__sticky');
@@ -30,7 +30,7 @@ window.addEventListener('scroll', function(e) {
     logo.classList.remove('sticky');
   }
 });
-about.addEventListener('scroll', function(e) {
+about.addEventListener('scroll', function() {
   console.log(window.scrollY);
   // if(window.scrollY){
   //   header.classList.add('is__sticky');
@@ -53,7 +53,7 @@ const message = document.querySelector('#message');
 form.addEventListener('focusin', (e) => {
   const input = e.target;
   const label = e.target.previousElementSibling;
-  if(label && label.tagName == "LABEL"){
+  if(label && label.tagName === "LABEL"){
     label.classList.toggle('push__up');
   }
 });
@@ -67,7 +67,7 @@ function showLabel(inputName){
 
 form.addEventListener('focusout', (e) =>{
   const label = e.target.previousElementSibling;
-  if(label && label.tagName == "LABEL"){
+  if(label && label.tagName === "LABEL"){
     label.classList.toggle('push__up');
   }
   for(let i=0; i < formInput.length; i++){
@@ -98,7 +98,7 @@ const button = document.querySelector('.form__button');
 
 function getFormData() {
   let data = {
-    name: [name.value],
+    fullName: [fullName.value],
     phone: [phone.value],
     email: [email.value],
     message: [message.value]
