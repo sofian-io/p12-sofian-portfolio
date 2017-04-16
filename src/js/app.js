@@ -27,7 +27,6 @@ navContainer.addEventListener('click', ()=>{
   }
 });
 window.addEventListener('scroll', function() {
-  // console.log(window.scrollY);
   if(window.scrollY){
     header.classList.add('is__sticky');
     navContainer.classList.add('sticky');
@@ -38,27 +37,64 @@ window.addEventListener('scroll', function() {
     logo.classList.remove('sticky');
   }
 });
-skills.addEventListener('scroll', function() {
-  console.log(window.scrollY);
-  // if(window.scrollY){
-  //   header.classList.add('is__sticky');
-  //   navContainer.classList.add('sticky');
-  //   logo.classList.add('sticky');
-  // }else if(!window.scrollY){
-  //   header.classList.remove('is__sticky');
-  //   navContainer.classList.remove('sticky');
-  //   logo.classList.remove('sticky');
-  // }
-});
+
+//
+// Navigation Scroll to effect (codepen)
+//
+
+(function() {
+
+
+  // ======== SCROLL FUNCTION ======== //
+  const scrollTo = (element, to, duration) => {
+    if (duration <= 0) {return;}
+    var difference = to - element.scrollTop;
+    var perTick = difference / duration * 10;
+
+    setTimeout(() => {
+      element.scrollTop = element.scrollTop + perTick;
+      if (element.scrollTop === to) {return;}
+      scrollTo(element, to, duration - 10);
+    }, 10);
+  }
+
+
+  // ======== TOP NAVIGATION ======== //
+  // Save DOM elements that can be scrolled to
+  let targetElements = {};
+  (function() {
+    const home = document.getElementById('home');
+    const skills = document.getElementById('skills');
+    const work = document.getElementById('work');
+    const contact = document.getElementById('contact');
+    targetElements = {
+      'home': home,
+      'skills': skills,
+      'work': work,
+      'contact': contact
+    };
+  })();
+
+  // Select links with scroll action
+  const scrollElements = document.querySelectorAll('.header [href^="#"]');
+  // Add event listeners to navigation links with scroll action
+  Array.prototype.forEach.call(scrollElements, scrollElement => {
+    scrollElement.addEventListener('click', event => {
+      event.preventDefault();
+      const targetElement = targetElements[(scrollElement.getAttribute('href').slice(1))];
+      scrollTo(document.body, targetElement.offsetTop, 800);
+    });
+  });
+})();
 
 
 //
 // Work section animation
 //
-const cardOne = document.querySelector("#one");
-const cardTwo = document.querySelector("#two");
-const cardThree = document.querySelector("#three");
-const cardFour = document.querySelector("#four");
+const cardOne = document.querySelector("#projectOne");
+const cardTwo = document.querySelector("#projectTwo");
+const cardThree = document.querySelector("#projectThree");
+const cardFour = document.querySelector("#projectFour");
 
 cardOne.addEventListener("mouseenter", showDescription);
 cardTwo.addEventListener("mouseenter", showDescription);
@@ -73,14 +109,22 @@ function showDescription(e) {
   const card = e.target;
   const cardInfo = card.querySelector('.card__info');
   const cardDescription = card.querySelector('.card__description');
-  cardInfo.classList.add('height');
+  if(window.innerWidth < 768){
+    cardInfo.classList.add('height-max');
+  }else{
+    cardInfo.classList.add('height');
+  }
   cardDescription.classList.add('opa');
 }
 function hideDescription(e) {
   const card = e.target;
   const cardInfo = card.querySelector('.card__info');
   const cardDescription = card.querySelector('.card__description');
-  cardInfo.classList.remove('height');
+  if(window.innerWidth < 768){
+    cardInfo.classList.remove('height-max');
+  }else{
+    cardInfo.classList.remove('height');
+  }
   cardDescription.classList.remove('opa');
 }
 
