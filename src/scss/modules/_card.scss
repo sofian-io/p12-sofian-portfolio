@@ -3,13 +3,14 @@
   position: relative;
   height: 450px;
   margin-bottom: 2em;
-  @include mq(medium){
+  @include mq(large){
     flex: 1 50%;
     padding: 0 1em;
   }
   @include e(info){
-    @include mq(medium){
+    @include mq(large){
       margin-right: 1em;
+      width: auto;
     }
     padding: 0 1.5em;
     position: absolute;
@@ -21,6 +22,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    width: 100%;
     @extend %transition;
   }
   @include e(label){

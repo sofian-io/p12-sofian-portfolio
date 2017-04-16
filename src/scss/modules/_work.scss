@@ -2,19 +2,18 @@
   @extend %clearfix;
   padding: 100px 5% 0 5%;
   padding-top: 100px;
-  display: flex;
-  flex-direction: column-reverse;
   background-color: $bg-nav;
   @include mq(medium){
-    flex-direction: row;
+    display: flex;
+    flex-direction: row-reverse;
   }
   @include e(content){
-    flex: 1 80%;
-    display: flex;
-    flex-wrap: wrap;
     margin-top: 1em;
-    @include mq(medium){
+    @include mq(medium){  
+      display: flex;
+      flex-wrap: wrap;
       margin-top: 0;
+      flex: 1 80%;
     }
   }
 }
