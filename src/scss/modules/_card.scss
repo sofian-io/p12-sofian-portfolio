@@ -1,25 +1,52 @@
 .card{
   flex: 1 100%;
+  position: relative;
+  height: 450px;
+  margin-bottom: 2em;
   @include mq(medium){
     flex: 1 50%;
+    padding: 0 1em;
+  }
+  @include e(info){
+    @include mq(medium){  
+      margin-right: 1em;
+    }
     padding: 0 1.5em;
+    position: absolute;
+    bottom: 0;
+    background-color: $white;
+    height: 140px;
+    box-sizing: inherit;
+    border-radius: 0 0 5px 5px;
   }
   @include e(heading){
     margin: .5em 0;
     font-size: em(32px);
     font-weight: $font-weight--medium;
   }
-  @include e(icon){
-      width: 70px;
-      height: 70px;
-      --primary-color: $color-primary;
-      --secondary-color: $color-secondary;
-      --tertiary-color: $color-accent;
-  }
   @include e(text){
     font-size: em(18px);
     line-height: 1.5em;
     font-weight: $font-weight--light;
     margin-bottom: 2em;
+  }
+  @include e(image){
+    border-radius: 5px;
+    height: 350px;
+    width: 100%
+  }
+  @include e(description){
+    opacity: 0;
+  }
+}
+
+.label{
+  @include e(item){
+    margin-right: 5px;
+    color: lighten($color-secondary, 20%);
+    font-size: em(12px);
+    font-weight: $font-weight--light;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 }

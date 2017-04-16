@@ -5,7 +5,7 @@ const body = document.querySelector('.body');
 const header = document.querySelector('.header');
 const navContainer = document.querySelector('.nav__container');
 const logo = document.querySelector('.logo');
-const about = document.querySelector('.about');
+const skills = document.querySelector('.skills');
 const form = document.querySelector('.form');
 
 
@@ -30,7 +30,7 @@ window.addEventListener('scroll', function() {
     logo.classList.remove('sticky');
   }
 });
-about.addEventListener('scroll', function() {
+skills.addEventListener('scroll', function() {
   console.log(window.scrollY);
   // if(window.scrollY){
   //   header.classList.add('is__sticky');
@@ -84,8 +84,6 @@ form.addEventListener('focusout', (e) =>{
   }
 });
 
-
-
 //
 // Seding Contact Form Email
 //
@@ -108,7 +106,7 @@ function getFormData() {
 function handleFormSubmit(event) {
   event.preventDefault();
   buttonContainer.removeChild(button);
-  let replaceButton = `<button type="submit" class="form__button--disabled" disabled>
+  const replaceButton = `<button type="submit" class="form__button--disabled" disabled>
   <svg class="form__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
     <path d="M12.655 11.167C5.051 18.14 4.54 29.959 11.512 37.564l2.999-2.75c-5.455-5.948-5.056-15.194.894-20.65l-2.75-2.997z">
       <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"/>
@@ -127,9 +125,17 @@ xhr.onreadystatechange = function() {
       form.style.display = 'none';
       document.querySelector('.contact__title').innerHTML= 'Message Sent!';
       document.querySelector('.contact__text').innerHTML= 'Thank you for getting in touch. I will get back to you shortly.';
-      return;
-    }
+      const contact = document.querySelector('.contact');
+      const checkImage = `<div class="contact__check">
+      <svg class="skill__icon">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite/sprite.svg#svg--check"></use>
+      </svg>
+    </div>`;
+    contact.insertAdjacentHTML('afterbegin',checkImage);
+
+    return;
   }
+}
 };
 let encoded = Object.keys(data).map(function(k) {
   return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])

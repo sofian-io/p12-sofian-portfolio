@@ -1,0 +1,26 @@
+.skill{
+  flex: 1 100%;
+  @include mq(medium){
+    flex: 1 50%;
+    padding: 0 1.5em;
+  }
+  @include e(heading){
+    margin: .5em 0;
+    font-size: em(32px);
+    font-weight: $font-weight--medium;
+  }
+  @include e(icon){
+      width: 70px;
+      height: 70px;
+      --primary-color: $color-primary;
+      --secondary-color: $color-secondary;
+      --tertiary-color: $color-accent;
+      --quaternary-color: $color-link;
+  }
+  @include e(text){
+    font-size: em(18px);
+    line-height: 1.5em;
+    font-weight: $font-weight--light;
+    margin-bottom: 2em;
+  }
+}

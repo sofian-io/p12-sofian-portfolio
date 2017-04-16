@@ -19,4 +19,7 @@
     font-weight: $font-weight--light;
     margin-top: 0.8em;
   }
+  @include e(check){
+    text-align: center;
+  }
 }

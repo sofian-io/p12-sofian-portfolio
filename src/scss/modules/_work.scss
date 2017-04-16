@@ -2,9 +2,14 @@
   padding: 100px 5% 0 5%;
   padding-top: 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   background-color: $bg-nav;
   @include mq(medium){
     flex-direction: row;
+  }
+  @include e(content){
+    flex: 1 80%;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
