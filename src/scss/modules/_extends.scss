@@ -35,7 +35,13 @@ Helper classes
 .sticky{
 	margin-top: 0;
 }
-
+.height{
+	height: 300px;
+}
+.opa{
+	display: block;
+	opacity: 1;
+}
 %link{
 	font-weight: $font-weight--medium;
 	font-family: $font-family--primary;

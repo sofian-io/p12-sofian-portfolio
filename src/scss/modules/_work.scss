@@ -11,5 +11,9 @@
     flex: 1 80%;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 1em;
+    @include mq(medium){
+      margin-top: 0;
+    }
   }
 }

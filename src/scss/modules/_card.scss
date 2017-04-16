@@ -21,6 +21,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    @extend %transition;
   }
   @include e(label){
     flex: 1 60%;
@@ -35,9 +36,14 @@
     font-size: em(32px);
     font-weight: $font-weight--medium;
   }
+  @include e(subheading){
+    margin: 0;
+    font-size: em(16px);
+  }
   @include e(text){
-    font-size: em(18px);
-    line-height: 1.5em;
+    font-size: em(12px);
+    line-height: 1.8em;
+    letter-spacing: 1px;
     font-weight: $font-weight--light;
     margin-bottom: 2em;
   }
@@ -47,7 +53,54 @@
     width: 100%
   }
   @include e(description){
+    display: none;
     opacity: 0;
+    @extend %transition;
+  }
+  @include e(icon){
+    width: 24px;
+    height: 24px;
+    margin-right: 1.1em;
+  }
+  @include e(link){
+    @include m(social){
+      color: $color-primary;
+      position: relative;
+      @extend %transition;
+      &:hover{
+        color: $pickled-bluewood;
+      }
+      &::before, &::after {
+        position: absolute;
+        left: 19%;
+        opacity: 0;
+        z-index: -100;
+      }
+      &:hover::before, &:hover::after,
+      &:focus::before, &:focus::after {
+        opacity: 1;
+        z-index: 100;
+      }
+      &::before{
+        border-style: solid;
+        border-width: 1em .75em 0 .75em;
+        border-color: $pickled-bluewood transparent transparent transparent;
+        bottom: 145%;
+        margin-left: -.5em;
+        content: "";
+      }
+      &::after{
+        background: $pickled-bluewood;
+        border-radius: 5px;
+        bottom:225%;
+        color: $white;
+        width: 3.5em;
+        padding: .5em;
+        margin-left: -1em;
+        content: attr(data-tip);
+        text-align: center;
+      }
+    }
   }
 }
 

@@ -4,14 +4,24 @@
   }
   @include e(content){
     position: relative;
+    float: left;
+    @include m(inverse){
+      position: relative;
+      float: left;
+      @include mq(medium){
+      float: right;
+      }
+    }
   }
   @include e(text){
     color: $color-primary;
     @extend %sidebar__text;
     @include m(inverse){
-      color: $white;
+      color: $color-primary;
       @extend %sidebar__text;
       @include mq(medium){
+        margin-bottom: 0;
+        color: $white;
         position: absolute;
         text-align: center;
         top: 27px;
