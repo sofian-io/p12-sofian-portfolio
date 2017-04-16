@@ -8,7 +8,7 @@
     padding: 0 1em;
   }
   @include e(info){
-    @include mq(medium){  
+    @include mq(medium){
       margin-right: 1em;
     }
     padding: 0 1.5em;
@@ -18,9 +18,20 @@
     height: 140px;
     box-sizing: inherit;
     border-radius: 0 0 5px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  @include e(label){
+    flex: 1 60%;
+  }
+  @include e(links){
+    flex: 1 40%;
+    text-align: right;
   }
   @include e(heading){
-    margin: .5em 0;
+    margin: 0 0 .5em 0;
+    flex: 1 100%;
     font-size: em(32px);
     font-weight: $font-weight--medium;
   }
