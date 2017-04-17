@@ -76,7 +76,8 @@ window.addEventListener('scroll', function() {
   })();
 
   // Select links with scroll action
-  const scrollElements = document.querySelectorAll('.header [href^="#"]');
+  const scrollElements = document.querySelectorAll('[href^="#"]');
+  console.log(scrollElements);
   // Add event listeners to navigation links with scroll action
   Array.prototype.forEach.call(scrollElements, scrollElement => {
     scrollElement.addEventListener('click', event => {
