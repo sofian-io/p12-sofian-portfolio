@@ -110,7 +110,7 @@ function showDescription(e) {
   const card = e.target;
   const cardInfo = card.querySelector('.card__info');
   const cardDescription = card.querySelector('.card__description');
-  if(window.innerWidth < 768){
+  if(window.innerWidth < 1200){
     cardInfo.classList.add('height-max');
   }else{
     cardInfo.classList.add('height');
@@ -121,7 +121,7 @@ function hideDescription(e) {
   const card = e.target;
   const cardInfo = card.querySelector('.card__info');
   const cardDescription = card.querySelector('.card__description');
-  if(window.innerWidth < 768){
+  if(window.innerWidth < 1200){
     cardInfo.classList.remove('height-max');
   }else{
     cardInfo.classList.remove('height');

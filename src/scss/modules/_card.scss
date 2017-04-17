@@ -1,7 +1,7 @@
 .card{
   flex: 1 100%;
   position: relative;
-  height: 450px;
+  height: 500px;
   margin-bottom: 2em;
   @include mq(large){
     flex: 1 50%;
@@ -14,7 +14,7 @@
     }
     padding: 0 1.5em;
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
     background-color: $white;
     height: 140px;
     box-sizing: inherit;
@@ -35,7 +35,7 @@
   @include e(heading){
     margin: 0 0 .5em 0;
     flex: 1 100%;
-    font-size: em(32px);
+    font-size: em(28px);
     font-weight: $font-weight--medium;
   }
   @include e(subheading){
@@ -50,9 +50,42 @@
     margin-bottom: 2em;
   }
   @include e(image){
-    border-radius: 5px;
-    height: 350px;
-    width: 100%
+
+    @extend %card__image;
+
+    @include m(dashboard){
+      @extend %card__image;
+      background-image: url('../img/p9-webb-app-dashboard.jpg');
+
+      @include mq(large){
+        height: 350px;
+      }
+    }
+    @include m(react){
+      @extend %card__image;
+      background-image: url('../img/react.jpg');
+
+      @include mq(large){
+        height: 350px;
+      }
+    }
+    @include m(performance){
+      @extend %card__image;
+      background-image: url('../img/p11-performance-optimization.jpg');
+
+      @include mq(large){
+        height: 350px;
+      }
+    }
+    @include m(accessibility){
+      @extend %card__image;
+      background-image: url('../img/p8-accessibility-refactor.jpg');
+
+      @include mq(large){
+        height: 350px;
+      }
+    }
+
   }
   @include e(description){
     display: none;
