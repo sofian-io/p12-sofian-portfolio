@@ -38,6 +38,12 @@
     &:hover{
       color: $color-primary;
     }
+    @include m(home){
+      @extend %link;
+      @include mq(medium){
+        display: none;
+      }
+    }
 
     @include m(button){
       @extend %link;
