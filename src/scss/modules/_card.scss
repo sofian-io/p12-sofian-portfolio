@@ -1,14 +1,14 @@
-.card{
+.card {
   flex: 1 100%;
   position: relative;
   height: 500px;
   margin-bottom: 2em;
-  @include mq(large){
+  @include mq(large) {
     flex: 1 50%;
     padding: 0 1em;
   }
-  @include e(info){
-    @include mq(large){
+  @include e(info) {
+    @include mq(large) {
       margin-right: 1em;
       width: auto;
     }
@@ -25,112 +25,113 @@
     width: 100%;
     @extend %transition;
   }
-  @include e(label){
+  @include e(label) {
     flex: 1 60%;
   }
-  @include e(links){
+  @include e(links) {
     flex: 1 40%;
     text-align: right;
   }
-  @include e(heading){
-    margin: 0 0 .5em 0;
+  @include e(heading) {
+    margin: 0 0 0.5em 0;
     flex: 1 100%;
     font-size: em(28px);
     font-weight: $font-weight--medium;
   }
-  @include e(subheading){
+  @include e(subheading) {
     margin: 0;
     font-size: em(16px);
   }
-  @include e(text){
+  @include e(text) {
     font-size: em(12px);
     line-height: 1.8em;
     letter-spacing: 1px;
     font-weight: $font-weight--light;
     margin-bottom: 2em;
   }
-  @include e(image){
-
+  @include e(image) {
     @extend %card__image;
 
-    @include m(dashboard){
+    @include m(dashboard) {
       @extend %card__image;
-      background-image: url('../img/p9-webb-app-dashboard.jpg');
+      // background-image: url("../img/p9-webb-app-dashboard.jpg");
 
-      @include mq(large){
+      @include mq(large) {
         height: 350px;
       }
     }
-    @include m(react){
+    @include m(react) {
       @extend %card__image;
-      background-image: url('../img/react.jpg');
+      background-image: url("../img/react.webp");
 
-      @include mq(large){
+      @include mq(large) {
         height: 350px;
       }
     }
-    @include m(performance){
+    @include m(performance) {
       @extend %card__image;
-      background-image: url('../img/p11-performance-optimization.jpg');
+      background-image: url("../img/happyheart.png");
 
-      @include mq(large){
+      @include mq(large) {
         height: 350px;
       }
     }
-    @include m(accessibility){
+    @include m(accessibility) {
       @extend %card__image;
-      background-image: url('../img/p8-accessibility-refactor.jpg');
+      // background-image: url("../img/p8-accessibility-refactor.jpg");
 
-      @include mq(large){
+      @include mq(large) {
         height: 350px;
       }
     }
-
   }
-  @include e(description){
-    display: none;
+  @include e(description) {
+    // display: none;
     opacity: 0;
     @extend %transition;
   }
-  @include e(icon){
+  @include e(icon) {
     width: 24px;
     height: 24px;
     margin-right: 1.1em;
   }
-  @include e(link){
-    @include m(social){
+  @include e(link) {
+    @include m(social) {
       color: $color-primary;
       position: relative;
       @extend %transition;
-      &:hover{
+      &:hover {
         color: $pickled-bluewood;
       }
-      &::before, &::after {
+      &::before,
+      &::after {
         position: absolute;
         left: 19%;
         opacity: 0;
         z-index: -100;
       }
-      &:hover::before, &:hover::after,
-      &:focus::before, &:focus::after {
+      &:hover::before,
+      &:hover::after,
+      &:focus::before,
+      &:focus::after {
         opacity: 1;
         z-index: 100;
       }
-      &::before{
+      &::before {
         border-style: solid;
-        border-width: 1em .75em 0 .75em;
+        border-width: 1em 0.75em 0 0.75em;
         border-color: $pickled-bluewood transparent transparent transparent;
         bottom: 145%;
-        margin-left: -.5em;
+        margin-left: -0.5em;
         content: "";
       }
-      &::after{
+      &::after {
         background: $pickled-bluewood;
         border-radius: 5px;
-        bottom:225%;
+        bottom: 225%;
         color: $white;
         width: 3.5em;
-        padding: .5em;
+        padding: 0.5em;
         margin-left: -1em;
         content: attr(data-tip);
         text-align: center;
@@ -139,8 +140,8 @@
   }
 }
 
-.label{
-  @include e(item){
+.label {
+  @include e(item) {
     margin-right: 5px;
     color: lighten($color-secondary, 20%);
     font-size: em(12px);
